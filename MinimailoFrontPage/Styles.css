@@ -1,0 +1,221 @@
+/* Remove default spacing from everything */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background and font */
+body {
+  background-color: #fafafa;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* 1st div on the page — contains the nav */
+div.Nav {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/* Nav layout - logo on left, links on right */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 48px;
+}
+
+/* Logo text */
+nav h1 {
+  font-family: Georgia, serif;
+  font-size: 34px;
+  font-weight: normal;
+}
+
+/* Remove bullet points, put links in a row */
+nav ul {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+/* Each nav link */
+nav ul li {
+  font-size: 18;
+  cursor: pointer;
+}
+
+/* Nav link hover color */
+nav ul li:hover {
+  color: #e05c4b;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+
+}
+
+/* 2nd div on the page — contains the big heading */
+div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 90px 24px 16px;
+}
+
+/* The big heading */
+h2 {
+  font-family: Libre Baskerville, serif;
+  font-size: 60px;
+  font-weight: normal;
+  line-height: 1.2;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+}
+
+/* 3rd div on the page — contains the author line */
+div:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+/* Author text */
+p {
+  font-size: 15 px;
+  color: #888;
+}
+
+/* Orange author name */
+.Orange {
+  color: #e05c4b;
+  text-decoration: underline;
+}
+
+h3 {
+  padding-bottom: 12px;
+  font-weight: normal;
+  font-size: 26px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+div.Contents ul {
+  list-style: none;
+}
+
+div.Contents li {
+  padding-left: 200px;
+  font-size: 16px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  margin-bottom :5px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+div.Contents h3 {
+  padding-left: 200px;
+  font-size: 26px;
+  margin-bottom: 16px; 
+}
+
+div.contents li:hover {
+  color: #e05c4b;
+  width: fit-content;
+}
+
+div.Summary {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+}
+
+div.Summary h3{
+  position:absolute;
+  margin-left: -300px; /* reduce this number to go more left */
+  margin-top: -250; /* move it up */
+}
+div.Summary li {
+  margin-left : 20px;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 20 px;
+}
+
+.Summary ul {
+position :absolute;
+  margin-top: -200px;
+  margin-left: 185px;
+}
+
+div.Disclaimer {
+  padding: 0 24px;
+  margin-top: 30px;
+}
+
+div.Disclaimer h3 {
+  margin-left: -295px;
+  margin-top :   -150px;
+  position: absolute;
+}
+
+div.Disclaimer p {
+  position: absolute;
+  margin-left: 215px;
+  margin-top: -100px;
+  color :#1a1a1a;
+}
+
+div.CriteriaForSelection ol{
+  list-style: decimal ;
+  margin-left: 20px;
+
+}
+
+div.CriteriaForSelection {
+  margin-left: 530px;
+  max-width: 680px;
+  margin-bottom: 50pxs;
+}
+
+.bold{
+  font-weight: bold ;
+}
+
+div.CriteriaForSelection li
+{
+  margin-top: 10px;
+}
+
+a { color: #e05c4b;
+margin-left : 535px;
+margin-top : 100px;
+position: absolute;
+}
+
+div.MinimalioTheme h3 {
+margin-left : 532px;
+margin-top : 50px;
+ display: block;
+position: absolute;
+}
+
+img {
+  margin-left:530px;
+  margin-top: 200px;
+  position: absolute;
+  height: 600px;
+  width : 800px
+}
+
+div.MinimalioTheme p{
+  max-width: 680px;
+  color: #1a1a1a;
+text-align: left;
+margin-left :550px;
+margin-top: 100px;
+}
+.p1{
+margin-top: 50px ;
+;
+}
+
+
+
