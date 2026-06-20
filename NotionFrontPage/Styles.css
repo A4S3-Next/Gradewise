@@ -122,6 +122,25 @@ p {
     background-color: #213183;
 }
 
+.brands ul {
+    display: flex;
+    gap: 40px;
+    margin-left: 320px;
+    padding-top: 40px;
+    flex-wrap: wrap;
+    max-width: 55%;
+      justify-content: center;
+  align-items: center;
+
+}
+.brands ul li {
+    color: #ffff;
+}
+.main {
+    text-align: center;
+    justify-content: center;
+}
+
 /* RESET */
 * {
     margin: 0;
