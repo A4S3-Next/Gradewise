@@ -1,5 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-
 const FEATURES = [
   {
     title: 'Criterion-by-criterion scoring',
@@ -20,17 +18,28 @@ const FEATURES = [
 
 export function Features() {
   return (
-    <section className="mx-auto grid max-w-5xl gap-6 px-4 py-16 sm:grid-cols-3">
-      {FEATURES.map((feature) => (
-        <Card key={feature.title} className="border-border/60 bg-background/60 backdrop-blur">
-          <CardHeader>
-            <CardTitle className="text-lg">{feature.title}</CardTitle>
-          </CardHeader>
-          <CardContent className="text-sm text-muted-foreground">
-            {feature.description}
-          </CardContent>
-        </Card>
-      ))}
+    <section id="how-it-works" className="bg-muted/40">
+      <div className="mx-auto max-w-4xl px-4 py-24">
+        <h2 className="max-w-lg text-[clamp(1.75rem,3.5vw,2.5rem)] leading-tight font-semibold tracking-[-0.02em] text-foreground">
+          How GradeWise grades
+        </h2>
+
+        <div className="mt-12 divide-y divide-border border-t border-border">
+          {FEATURES.map((feature) => (
+            <div
+              key={feature.title}
+              className="grid gap-2 py-8 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] sm:gap-10"
+            >
+              <h3 className="text-xl font-medium tracking-tight text-foreground">
+                {feature.title}
+              </h3>
+              <p className="text-base leading-relaxed text-muted-foreground">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   )
 }
