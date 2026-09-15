@@ -26,6 +26,7 @@ export type Database = {
           plan?: 'free' | 'premium'
           created_at?: string
         }
+        Relationships: []
       }
       submissions: {
         Row: {
@@ -55,7 +56,10 @@ export type Database = {
           score?: number | null
           created_at?: string
         }
+        Relationships: []
       }
     }
+    Views: Record<string, never>
+    Functions: Record<string, never>
   }
 }

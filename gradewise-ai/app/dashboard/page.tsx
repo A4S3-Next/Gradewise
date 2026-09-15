@@ -1,5 +1,8 @@
+import Link from 'next/link'
 import { FileText } from 'lucide-react'
+import { buttonVariants } from '@/components/ui/button'
 import { getSubmissions, type Submission } from '@/lib/submissions'
+import { cn } from 'cn'
 
 const STATUS_LABEL: Record<Submission['status'], string> = {
   graded: 'Graded',
@@ -20,7 +23,12 @@ export default async function DashboardPage() {
 
   return (
     <div className="flex flex-col gap-8">
-      <h1 className="text-2xl font-semibold tracking-tight text-foreground">Dashboard</h1>
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-semibold tracking-tight text-foreground">Dashboard</h1>
+        <Link href="/dashboard/upload" className={cn(buttonVariants(), 'rounded-full px-4')}>
+          Upload submission
+        </Link>
+      </div>
 
       {submissions.length === 0 ? (
         <div className="flex flex-col items-center gap-3 rounded-2xl border border-dashed border-border px-6 py-20 text-center">
@@ -30,6 +38,12 @@ export default async function DashboardPage() {
             Your submissions, progress, and deadlines will appear here once you upload your first
             piece of work.
           </p>
+          <Link
+            href="/dashboard/upload"
+            className={cn(buttonVariants({ variant: 'outline' }), 'mt-2 rounded-full px-4')}
+          >
+            Upload your first submission
+          </Link>
         </div>
       ) : (
         <>
