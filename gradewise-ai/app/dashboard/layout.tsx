@@ -8,7 +8,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
     <div className="flex min-h-screen">
       <Sidebar />
       <div className="flex flex-1 flex-col">
-        <header className="flex h-16 items-center justify-end gap-2 border-b border-border/40 px-6">
+        <header className="flex h-16 items-center justify-end gap-2 border-b border-border px-6">
           <ThemeToggle />
           <SignOutButton />
         </header>
