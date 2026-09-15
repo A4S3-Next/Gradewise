@@ -5,6 +5,10 @@ vi.mock('@/components/auth/google-signin-button', () => ({
   GoogleSignInButton: () => <button>Continue with Google</button>,
 }))
 
+vi.mock('next/navigation', () => ({
+  useSearchParams: () => new URLSearchParams(),
+}))
+
 import LoginPage from '@/app/login/page'
 
 describe('LoginPage', () => {

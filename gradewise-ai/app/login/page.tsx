@@ -1,6 +1,8 @@
+import { Suspense } from 'react'
 import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { GoogleSignInButton } from '@/components/auth/google-signin-button'
+import { LoginError } from '@/components/auth/login-error'
 
 export default function LoginPage() {
   return (
@@ -12,6 +14,9 @@ export default function LoginPage() {
           </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
+          <Suspense fallback={null}>
+            <LoginError />
+          </Suspense>
           <GoogleSignInButton />
           <Link href="/" className="text-center text-sm text-muted-foreground hover:underline">
             Back to home
